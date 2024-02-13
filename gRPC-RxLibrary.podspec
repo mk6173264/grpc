@@ -21,7 +21,7 @@
 
 Pod::Spec.new do |s|
   s.name     = 'gRPC-RxLibrary'
-  version = '1.38.1'
+  version = '1.38.1-static'
   s.version  = version
   s.summary  = 'Reactive Extensions library for iOS/OSX.'
   s.homepage = 'https://grpc.io'
@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
   s.authors  = { 'The gRPC contributors' => 'grpc-packages@google.com' }
 
   s.source = {
-    :git => 'https://github.com/grpc/grpc.git',
+    :git => 'https://github.com/mk6173264/grpc.git',
     :tag => "v#{version}",
   }
 
