@@ -46,7 +46,7 @@ Pod::Spec.new do |s|
   s.requires_arc = false
 
   name = 'grpc'
-  abseil_version = '1.20210324.0'
+  abseil_version = '1.20210324.2'
 
   # When creating a dynamic framework, name it grpc.framework instead of gRPC-Core.framework.
   # This lets users write their includes like `#include <grpc/grpc.h>` as opposed to `#include
@@ -86,7 +86,7 @@ Pod::Spec.new do |s|
   s.pod_target_xcconfig = {
     'GRPC_SRC_ROOT' => src_root,
     'HEADER_SEARCH_PATHS' => '"$(inherited)" "$(GRPC_SRC_ROOT)/include"',
-    'USER_HEADER_SEARCH_PATHS' => '"$(GRPC_SRC_ROOT)"',
+    'USER_HEADER_SEARCH_PATHS' => '"$(GRPC_SRC_ROOT)" "$(PODS_ROOT)/../Checkouts/gRPC-Core"/**',
     # If we don't set these two settings, `include/grpc/support/time.h` and
     # `src/core/lib/gpr/string.h` shadow the system `<time.h>` and `<string.h>`, breaking the
     # build.
